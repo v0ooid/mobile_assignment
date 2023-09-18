@@ -1,20 +1,19 @@
 package my.edu.tarc.jobseek
 
-import android.app.Notification
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import my.edu.tarc.jobseek.databinding.ActivityMainBinding
 import my.edu.tarc.jobseek.home.HomeFragment
 import my.edu.tarc.jobseek.notification.NotifcationFragment
 import my.edu.tarc.jobseek.profile.ProfileFragment
 
+//TESTING GITHUB
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        var binding = ActivityMainBinding.inflate(layoutInflater)
+        val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val homeFrag = HomeFragment()
