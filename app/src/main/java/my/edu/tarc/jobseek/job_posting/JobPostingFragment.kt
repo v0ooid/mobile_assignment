@@ -57,4 +57,6 @@ class JobPostingFragment : Fragment() {
                 }
             }
     }
+
+    //sze cheng test
 }
