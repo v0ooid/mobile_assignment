@@ -5,6 +5,10 @@
         android:title="Home"
         android:icon="@drawable/ic_home" />
     <item
+        android:id="@+id/navigation_favorites"
+        android:title="Favorites"
+        android:icon="@drawable/ic_favorite"/>
+    <item
         android:id="@+id/navigation_notifications"
         android:title="Notifications"
         android:icon="@drawable/ic_notifcations" />
