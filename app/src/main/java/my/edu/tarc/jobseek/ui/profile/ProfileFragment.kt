@@ -1,4 +1,4 @@
-package my.edu.tarc.jobseek.profile
+package my.edu.tarc.jobseek.ui.profile
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
