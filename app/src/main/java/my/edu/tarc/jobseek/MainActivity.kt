@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import my.edu.tarc.jobseek.databinding.ActivityMainBinding
 import my.edu.tarc.jobseek.home.HomeFragment
+import my.edu.tarc.jobseek.job_posting.JobPostingFragment
 import my.edu.tarc.jobseek.notification.NotifcationFragment
 import my.edu.tarc.jobseek.profile.ProfileFragment
 
@@ -16,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val homeFrag = HomeFragment()
+        val homeFrag = JobPostingFragment()
         val notiFrag = NotifcationFragment()
         val profileFrag = ProfileFragment()
 

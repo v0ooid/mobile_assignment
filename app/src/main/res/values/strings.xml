@@ -2,7 +2,44 @@
     <string name="app_name">JobSeek</string>
 
     <string name="company_name">Company Name</string>
+    <string name="upload_logo">Upload Logo</string>
+    <string name="job_type">Job Type</string>
+    <string name="ask_job_title">What is the job title?</string>
+    <string name="ask_company_name">What is your company name?</string>
+    <string name="job_category">Job Category</string>
     <string name="job_title">Job Title</string>
     <string name="job_essential">Job Essential</string>
     <string name="salary">Salary</string>
+    <string name="work_location">Work Location</string>
+    <string name="state">State</string>
+    <string-array name="job_category_group">
+        <item>Audit</item>
+        <item>Accounting</item>
+        <item>Admin</item>
+        <item>Beauty</item>
+        <item>Cleaning</item>
+        <item>Construction</item>
+        <item>HR</item>
+        <item>Software Engineering</item>
+    </string-array>
+    <string name="employment_type">Employment Type</string>
+    <string name="full_time">Full Time</string>
+    <string name="part_time">Part Time</string>
+    <string name="internship">Internship</string>
+    <string-array name="state_group">
+        <item>Johor</item>
+        <item>Kedah</item>
+        <item>Kelantan</item>
+        <item>Malacca</item>
+        <item>Negeri Sembilan</item>
+        <item>Pahang</item>
+        <item>Penang</item>
+        <item>Perak</item>
+        <item>Perlis</item>
+        <item>Selangor</item>
+        <item>Terengganu</item>
+        <item>Wilayah Persekutuan Kuala Lumpur</item>
+    </string-array>
+    <string name="job_description">Job Description</string>
+    <string name="post">Post</string>
 </resources>
