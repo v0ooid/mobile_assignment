@@ -6,4 +6,9 @@
     <string name="title_notifcation">Notifcations\n</string>
     <string name="title_profile">Profile</string>
     <string name="title_headhunting">Head Hunting</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="confirmPassword">Confirm Password</string>
 </resources>

@@ -6,4 +6,5 @@
     </style>
 
     <style name="Theme.JobSeek" parent="Base.Theme.JobSeek" />
+
 </resources>
