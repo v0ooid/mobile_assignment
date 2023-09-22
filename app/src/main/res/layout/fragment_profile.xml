@@ -1,19 +1,251 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout2"
+    android:id="@+id/scollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".profile.ProfileFragment">
+    android:fillViewport="true"
+    >
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="THIS IS PROFILE"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        tools:context=".profile.ProfileFragment"
+        >
+
+        <ImageView
+            android:id="@+id/imageViewProfilePic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/profile"
+            android:src="@drawable/baseline_person_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cardView1"
+            app:layout_constraintTop_toTopOf="@id/frameLayout2" />
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:hint="@string/username"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewProfilePic"
+            app:layout_constraintStart_toEndOf="@+id/imageViewProfilePic"
+            app:layout_constraintTop_toTopOf="@+id/imageViewProfilePic"
+            app:layout_constraintVertical_bias="0.16" />
+
+        <TextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:hint="@string/status"
+            app:layout_constraintEnd_toEndOf="@+id/textViewName"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textViewName"
+            app:layout_constraintTop_toBottomOf="@+id/textViewName" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView1"
+            android:layout_width="320dp"
+            android:layout_height="109dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewProfilePic">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/stroke">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonProfile"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/card_profile"
+
+                    android:text="@string/profile"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </androidx.appcompat.widget.AppCompatButton>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="130dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/card_profile"
+            app:layout_constraintEnd_toEndOf="@+id/cardView1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cardView1"
+            app:layout_constraintTop_toBottomOf="@+id/cardView1" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="130dp"
+            android:layout_height="150dp"
+            android:background="@drawable/card_profile"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="@+id/cardView1"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/cardView1"
+            app:layout_constraintTop_toTopOf="@+id/view"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="33dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/applied_job"
+            android:src="@drawable/baseline_file_upload_24"
+            app:layout_constraintEnd_toEndOf="@+id/view3"
+            app:layout_constraintStart_toStartOf="@+id/view3"
+            app:layout_constraintTop_toTopOf="@+id/view3"
+            app:srcCompat="@drawable/baseline_check_circle_outline_24" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonUploadResume"
+            android:layout_width="108dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/button_border_login"
+            android:text="@string/upload"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintStart_toStartOf="@+id/view" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="33dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/upload"
+            android:src="@drawable/baseline_file_upload_24"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toTopOf="@+id/view" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/upload_resume"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintHorizontal_bias="0.529"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/applied_job"
+            app:layout_constraintEnd_toEndOf="@+id/imageView6"
+            app:layout_constraintStart_toStartOf="@+id/imageView6"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonAppliedJob"
+            android:layout_width="108dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/button_border_login"
+            android:text="@string/view"
+            app:layout_constraintBottom_toBottomOf="@+id/view3"
+            app:layout_constraintEnd_toEndOf="@+id/view3"
+            app:layout_constraintStart_toStartOf="@+id/view3" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonSetting"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/button_border_login"
+            android:drawableStart="@drawable/baseline_settings_24"
+            android:drawableEnd="@drawable/baseline_keyboard_arrow_right_24"
+            android:drawablePadding="10dp"
+            android:paddingStart="5dp"
+            android:text="@string/setting"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="@+id/cardView1"
+            app:layout_constraintStart_toStartOf="@+id/cardView1"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/about_us"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_border_login"
+            android:drawableStart="@drawable/baseline_message_24"
+            android:drawableEnd="@drawable/baseline_keyboard_arrow_right_24"
+            android:drawablePadding="10dp"
+            android:paddingStart="5dp"
+            android:text="@string/about_us"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="@+id/cardView1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cardView1"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSetting"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:id="@+id/deleteAcc"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_border_login"
+            android:drawableStart="@drawable/baseline_delete_24"
+            android:drawableEnd="@drawable/baseline_keyboard_arrow_right_24"
+            android:drawablePadding="10dp"
+            android:paddingStart="5dp"
+            android:text="@string/delete_acc"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="@+id/cardView1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cardView1"
+            app:layout_constraintTop_toBottomOf="@+id/about_us"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:id="@+id/logout"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_border_login"
+            android:drawableStart="@drawable/baseline_logout_24"
+            android:drawableEnd="@drawable/baseline_keyboard_arrow_right_24"
+            android:drawablePadding="10dp"
+            android:paddingStart="5dp"
+            android:text="@string/logout"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="@+id/cardView1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cardView1"
+            app:layout_constraintTop_toBottomOf="@+id/deleteAcc"
+            tools:ignore="RtlSymmetry" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

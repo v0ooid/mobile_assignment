@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId){
                 R.id.navigation_home->setCurrentFragment(homeFrag)
                 R.id.navigation_notifications->setCurrentFragment(notiFrag)
-                R.id.navigation_profile->setCurrentFragment(loginFrag)
+                R.id.navigation_profile->setCurrentFragment(profileFrag)
             }
             true
         }
