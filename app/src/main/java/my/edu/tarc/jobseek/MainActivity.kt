@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
 
         val homeFrag = HomeFragment()
         val notiFrag = NotifcationFragment()
-        val headHuntingFrag = headHunting_Fragement()
         val profileFrag = ProfileFragment()
         val loginFrag = LoginFragment()
         setCurrentFragment(homeFrag)
@@ -34,6 +33,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_notifications->setCurrentFragment(notiFrag)
                 R.id.navigation_profile->setCurrentFragment(loginFrag)
                 R.id.headhunting_menuItem->setCurrentFragment(headHuntingFrag)
+                R.id.navigation_profile->setCurrentFragment(profileFrag)
             }
             true
         }

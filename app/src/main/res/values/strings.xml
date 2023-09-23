@@ -11,4 +11,17 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="confirmPassword">Confirm Password</string>
+    <string name="status">Status</string>
+    <string name="profile">Profile</string>
+    <string name="upload_resume" > Upload Resume</string>
+    <string name="upload">Upload</string>
+    <string name="applied_job">Applied Job</string>
+    <string name="view">View</string>
+    <string name="setting">Setting</string>
+    <string name="about_us">About Us</string>
+    <string name="delete_acc">Delete Account</string>
+    <string name="logout">Log Out</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="desc_reset_password">Please enter your new password to continue</string>
+    <string name="new_password">New Password</string>
 </resources>

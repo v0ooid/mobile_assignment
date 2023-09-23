@@ -6,10 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import my.edu.tarc.jobseek.R
+import my.edu.tarc.jobseek.databinding.ActivityMainBinding
+import my.edu.tarc.jobseek.databinding.FragmentProfileBinding
 
 class ProfileFragment : Fragment() {
+    private lateinit var binding: FragmentProfileBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = FragmentProfileBinding.inflate(layoutInflater)
+
+
     }
 
     override fun onCreateView(

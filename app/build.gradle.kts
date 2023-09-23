@@ -38,7 +38,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
 }
+
 
 dependencies {
 
@@ -64,4 +66,7 @@ dependencies {
     implementation ("androidx.navigation:navigation-dynamic-features-fragment:$nav_version")
 
     implementation ("com.google.android.material:material:1.3.0")
+
+    //noinspection GradleCompatible
+    implementation("com.google.android.material:material:1.2.1")
 }
