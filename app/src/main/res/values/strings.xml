@@ -2,6 +2,34 @@
     <string name="app_name">JobSeek</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_home">Home\n</string>
+    <string name="title_notifications">Notifications\n</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_headhunting">Head Hunting</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="status">Status</string>
+    <string name="profile">Profile</string>
+    <string name="upload_resume"> Upload Resume</string>
+    <string name="upload">Upload</string>
+    <string name="applied_job">Applied Job</string>
+    <string name="view">View</string>
+    <string name="setting">Setting</string>
+    <string name="about_us">About Us</string>
+    <string name="delete_acc">Delete Account</string>
+    <string name="logout">Log Out</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="desc_reset_password">Please enter your new password to continue</string>
+    <string name="new_password">New Password</string>
+    <string name="search_candidates">Search for candidates</string>
+    <string name="candi_name">Name</string>
+    <string name="candi_field">Field</string>
+    <string name="candi_experience">Experience</string>
+    <string name="candi_location">Location</string>
+    <string name="candi_education">Education</string>
 
     <!-- HOME -->
     <string name="filter_content">Filter your job</string>
