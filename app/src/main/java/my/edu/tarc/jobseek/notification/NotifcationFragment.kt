@@ -1,20 +1,19 @@
-package my.edu.tarc.jobseek.ui.profile
+package my.edu.tarc.jobseek.notification
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import my.edu.tarc.jobseek.R
-import my.edu.tarc.jobseek.databinding.ActivityMainBinding
-import my.edu.tarc.jobseek.databinding.FragmentProfileBinding
 
-class ProfileFragment : Fragment() {
-    private lateinit var binding: FragmentProfileBinding
+class NotifcationFragment : Fragment() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = FragmentProfileBinding.inflate(layoutInflater)
-
+//        (activity as AppCompatActivity).supportActionBar?.hide()
 
     }
 
@@ -23,8 +22,13 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false)
+        return inflater.inflate(R.layout.fragment_notification, container, false)
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        // Re-enable the app bar when the fragment is destroyed
+        (activity as AppCompatActivity).supportActionBar?.show()
+    }
 
 }

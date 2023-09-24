@@ -2,49 +2,85 @@ package my.edu.tarc.jobseek
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.OnBackPressedCallback
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI.setupWithNavController
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import my.edu.tarc.jobseek.databinding.ActivityMainBinding
+import my.edu.tarc.jobseek.headHunting.HeadHuntingFragment
 import my.edu.tarc.jobseek.home.HomeFragment
-import my.edu.tarc.jobseek.login.LoginFragment
 import my.edu.tarc.jobseek.notification.NotifcationFragment
-import my.edu.tarc.jobseek.profile.ProfileFragment
-import my.edu.tarc.jobseek.ui.headHunting.headHunting_Fragement
-import my.edu.tarc.jobseek.ui.home.HomeFragment
-import my.edu.tarc.jobseek.ui.notification.NotifcationFragment
-import my.edu.tarc.jobseek.ui.profile.ProfileFragment
+import java.util.ServiceConfigurationError
 
-//TESTING GITHUB
+
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var appBarConfiguration: AppBarConfiguration
+    private lateinit var binding: ActivityMainBinding
+
+    private var isBottomNavigationBarVisible = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val homeFrag = HomeFragment()
-        val notiFrag = NotifcationFragment()
-        val profileFrag = ProfileFragment()
-        val loginFrag = LoginFragment()
-        setCurrentFragment(homeFrag)
+        val navView: BottomNavigationView = binding.navView
 
-        binding.bottomNavigation.setOnNavigationItemSelectedListener {
-            when(it.itemId){
-                R.id.navigation_home->setCurrentFragment(homeFrag)
-                R.id.navigation_notifications->setCurrentFragment(notiFrag)
-                R.id.navigation_profile->setCurrentFragment(loginFrag)
-                R.id.headhunting_menuItem->setCurrentFragment(headHuntingFrag)
-                R.id.navigation_profile->setCurrentFragment(profileFrag)
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment
+        val navController = navHostFragment.navController
+
+        val appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.navigationE_home, R.id.navigationE_noti, R.id.navigationE_headHunting, R.id.navigationE_profile
+            )
+        )
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        navView.setupWithNavController(navController)
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            if (destination.id == R.id.navigation_home){
+                actionBar?.title = "Home"
+            } else if (destination.id == R.id.navigationE_noti){
+                actionBar?.title = "Notifications"
+            } else if (destination.id == R.id.navigationE_headHunting){
+                actionBar?.title = "Head Hunting"
             }
-            true
+            else if (destination.id == R.id.navigationE_profile){
+                actionBar?.title = "Profile"
+            } else{
+                title = getString(R.string.app_name)
+            }
         }
+
+
+        val backPressedCallback = object : OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+                val builder = AlertDialog.Builder(this@MainActivity)
+                builder.setMessage("Do you want to exit?")
+                    .setPositiveButton("Exit", { _, _ -> finish() })
+                    .setNegativeButton("Cancel", { _, _ -> })
+                builder.create().show()
+            }
+        }
+        onBackPressedDispatcher.addCallback(backPressedCallback)
+
+
     }
 
-    private fun setCurrentFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction().apply {
-            replace(R.id.fragment_container ,fragment)
-            commit()
-        }
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = findNavController(R.id.nav_host_fragment_activity_main)
+        return navController.navigateUp() || super.onSupportNavigateUp()
     }
-
 
 }
+
+
+

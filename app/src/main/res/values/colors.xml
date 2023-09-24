@@ -7,4 +7,5 @@
     <color name="stroke">#5EAAA8</color>
     <color name="gray">#7F7F7F</color>
     <color name="red">#ff3333</color>
+    <color name="dark_grey">#B0B0B0B0</color>
 </resources>
