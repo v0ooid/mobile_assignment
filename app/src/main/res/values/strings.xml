@@ -13,6 +13,7 @@
     <string name="work_location">Work Location</string>
     <string name="state">State</string>
     <string-array name="job_category_group">
+        <item>Select Job Category</item>
         <item>Audit</item>
         <item>Accounting</item>
         <item>Admin</item>
@@ -27,6 +28,7 @@
     <string name="part_time">Part Time</string>
     <string name="internship">Internship</string>
     <string-array name="state_group">
+        <item>Select a State</item>
         <item>Johor</item>
         <item>Kedah</item>
         <item>Kelantan</item>
@@ -42,4 +44,11 @@
     </string-array>
     <string name="job_description">Job Description</string>
     <string name="post">Post</string>
+    <string name="saving">Saving...</string>
+
+
+    <string name="read_url">https://mobile-assignment-5246e-default-rtdb.asia-southeast1.firebasedatabase.app/</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
