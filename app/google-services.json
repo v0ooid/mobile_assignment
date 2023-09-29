@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "269926547611",
+    "project_id": "mobile-assignment-5246e",
+    "storage_bucket": "mobile-assignment-5246e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:269926547611:android:881e51d5827bfb4da3463e",
+        "android_client_info": {
+          "package_name": "my.edu.tarc.jobseek"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoMUsjfybDSoMblRO5xZcCigRIPrIQQ-4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
