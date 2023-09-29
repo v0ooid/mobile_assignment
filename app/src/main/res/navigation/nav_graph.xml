@@ -18,6 +18,19 @@
         android:id="@+id/navigationE_headHunting"
         android:name="my.edu.tarc.jobseek.headHunting.HeadHuntingFragment"
         android:label="Head Hunting"
-        tools:layout="@layout/fragment_headhunting" />
+        tools:layout="@layout/fragment_head_hunting" >
+        <action
+            android:id="@+id/action_navigationE_headHunting_to_candidateDetailFragment"
+            app:destination="@id/candidateDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/candidateDetailFragment"
+        android:name="my.edu.tarc.jobseek.headHunting.CandidateDetailFragment"
+        android:label="CandidateDetailFragment"
+        tools:layout="@layout/fragment_candidate">
+        <action
+            android:id="@+id/action_candidateDetailFragment_to_navigationE_headHunting"
+            app:destination="@id/navigationE_headHunting" />
+    </fragment>
 
 </navigation>

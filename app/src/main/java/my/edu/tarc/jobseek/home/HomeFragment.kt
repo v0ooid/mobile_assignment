@@ -13,7 +13,6 @@ class HomeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        (activity as AppCompatActivity).supportActionBar?.hide()
     }
 
     override fun onCreateView(
@@ -28,6 +27,6 @@ class HomeFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         // Re-enable the app bar when the fragment is destroyed
-        (activity as AppCompatActivity).supportActionBar?.show()
+//        (activity as AppCompatActivity).supportActionBar?.show()
     }
 }

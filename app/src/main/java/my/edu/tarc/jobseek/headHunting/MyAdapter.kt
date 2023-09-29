@@ -1,61 +1,61 @@
 package my.edu.tarc.jobseek.headHunting
 
 import android.content.Context
-import android.content.DialogInterface
-import android.content.DialogInterface.OnClickListener
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewParent
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import my.edu.tarc.jobseek.R
-import org.w3c.dom.DocumentType
-import org.w3c.dom.Text
+
 
 class MyAdapter(
-    private val context: Context,
-    private val recordClickListener: RecordClickListener
-) :
-    RecyclerView.Adapter<MyAdapter.CandiViewHolder>() {
-    private var candList = emptyList<Candidate>()
+    val context: Context,
+    private val listener: MyClickListener
+) : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
 
-    class CandiViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val name: TextView = itemView.findViewById(R.id.textViewCandiName)
-        val field: TextView = itemView.findViewById(R.id.textViewCandiField)
-        val experience: TextView = itemView.findViewById(R.id.textViewCandiExp)
-        val location: TextView = itemView.findViewById(R.id.textViewCandiLocation)
-    }
+    private var dataSet = ArrayList<Candidate>()
 
-    internal fun setCandi(candiList: List<Candidate>) {
-        this.candList = candiList
-        notifyDataSetChanged()
-    }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CandiViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.recycler_view_layout, parent, false)
-        return CandiViewHolder(view)
+        return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: CandiViewHolder, position: Int) {
-        val candi = candList[position]
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val candi = dataSet[position]
         holder.name.text = candi.name
         holder.field.text = candi.field
         holder.experience.text = candi.experience.toString()
         holder.location.text = candi.location
+
         holder.itemView.setOnClickListener {
+            listener.onRecordClickListener(position)
         }
-
-
     }
 
     override fun getItemCount(): Int {
-        return candList.size
+        return dataSet.size
     }
+
+    fun updateCandiList(candiList: List<Candidate>){
+        this.dataSet.clear()
+        this.dataSet.addAll(candiList)
+        notifyDataSetChanged()
+
+    }
+
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val name: TextView = itemView.findViewById(R.id.textViewAppliedJobName)
+        val field: TextView = itemView.findViewById(R.id.textViewAppliedJobField)
+        val experience: TextView = itemView.findViewById(R.id.textViewAppliedJobExp)
+        val location: TextView = itemView.findViewById(R.id.textViewAppliedJobLocation)
+    }
+
+}
+interface MyClickListener{
+    fun onRecordClickListener(index: Int)
 }
 
-    // onClickListener Interface
-    interface RecordClickListener {
-        fun onRecordClickListener(index: Int)
-    }
+
+
