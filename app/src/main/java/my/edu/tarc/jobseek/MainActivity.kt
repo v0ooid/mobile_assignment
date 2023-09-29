@@ -3,7 +3,9 @@ package my.edu.tarc.jobseek
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
 import my.edu.tarc.jobseek.databinding.ActivityMainBinding
+import my.edu.tarc.jobseek.job_detail.JobDetailFragment
 import my.edu.tarc.jobseek.job_list.JobListFragment
 import my.edu.tarc.jobseek.job_posting.JobPostingFragment
 import my.edu.tarc.jobseek.notification.NotifcationFragment
@@ -18,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val homeFrag = JobListFragment()
-        val notiFrag = NotifcationFragment()
+        val notiFrag = JobPostingFragment()
         val profileFrag = ProfileFragment()
 
         setCurrentFragment(homeFrag)

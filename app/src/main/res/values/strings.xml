@@ -3,17 +3,14 @@
 
     <string name="company_name">Company Name</string>
     <string name="upload_logo">Upload Logo</string>
-    <string name="job_type">Job Type</string>
+    <string name="job_specialization">Job Specialization</string>
     <string name="ask_job_title">What is the job title?</string>
     <string name="ask_company_name">What is your company name?</string>
-    <string name="job_category">Job Category</string>
     <string name="job_title">Job Title</string>
-    <string name="job_essential">Job Essential</string>
     <string name="salary">Salary</string>
-    <string name="work_location">Work Location</string>
     <string name="state">State</string>
-    <string-array name="job_category_group">
-        <item>Select Job Category</item>
+    <string-array name="job_specialization_group">
+        <item>select a job specialization</item>
         <item>Audit</item>
         <item>Accounting</item>
         <item>Admin</item>
@@ -42,13 +39,11 @@
         <item>Terengganu</item>
         <item>Wilayah Persekutuan Kuala Lumpur</item>
     </string-array>
-    <string name="job_description">Job Description</string>
+    <string name="job_responsibility">Job Responsibility</string>
     <string name="post">Post</string>
     <string name="saving">Saving...</string>
-
-
-    <string name="read_url">https://mobile-assignment-5246e-default-rtdb.asia-southeast1.firebasedatabase.app/</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="job_highlight">Job Highlight</string>
+    <string name="skills">Skills</string>
+    <string name="qualification">Qualification</string>
+    <string name="year_of_experience">Years of Experience</string>
 </resources>

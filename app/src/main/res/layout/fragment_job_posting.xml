@@ -33,9 +33,20 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/job_type"
+                android:text="@string/job_specialization"
                 android:textSize="20sp"
                 android:textAlignment="center"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/editTextCompanyName"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:text="Kaion Enterprise"
+                android:gravity="start|center_vertical"
+                android:background="@drawable/border"
+                android:editable="false"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -47,30 +58,20 @@
                 android:gravity="start|center_vertical"
                 android:background="@drawable/border"/>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:id="@+id/editTextCompanyName"
-                android:layout_marginTop="20dp"
-                android:padding="16dp"
-                android:hint="@string/ask_company_name"
-                android:gravity="start|center_vertical"
-                android:background="@drawable/border"/>
-
             <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/spinnerJobCategory"
+                android:id="@+id/spinnerJobSpecialization"
                 android:layout_marginTop="20dp"
                 android:padding="16dp"
-                android:entries="@array/job_category_group"
+                android:entries="@array/job_specialization_group"
                 android:gravity="start|center_vertical"
                 android:background="@drawable/border"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/job_type"
+                android:text="@string/employment_type"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:textSize="15sp"
@@ -105,21 +106,45 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:id="@+id/editTextWorkLocation"
+                android:layout_height="160dp"
+                android:id="@+id/editTextJobResponsibility"
                 android:padding="16dp"
-                android:hint="@string/work_location"
-                android:gravity="start|center_vertical"
+                android:hint="@string/job_responsibility"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:background="@drawable/border"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:id="@+id/editTextSkills"
+                android:padding="16dp"
+                android:hint="@string/skills"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/border"/>
 
-            <Spinner
+            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/spinnerState"
+                android:id="@+id/editTextQualification"
                 android:padding="16dp"
-                android:entries="@array/state_group"
-                android:gravity="start|center_vertical"
+                android:hint="@string/qualification"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/editTextYearExperience"
+                android:padding="16dp"
+                android:hint="@string/year_of_experience"
+                android:inputType="number"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/border"/>
 
@@ -134,16 +159,6 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/border"/>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:id="@+id/editTextJobDescription"
-                android:padding="16dp"
-                android:hint="@string/job_description"
-                android:gravity="start|center_vertical"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/border"/>
-
             <Button
                 android:id="@+id/buttonPost"
                 android:layout_width="match_parent"
@@ -152,6 +167,7 @@
                 android:layout_marginBottom="20dp"
                 android:text="@string/post"
                 app:cornerRadius="20dp"/>
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
