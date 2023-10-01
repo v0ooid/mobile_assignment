@@ -7,17 +7,13 @@
     <fragment
         android:id="@+id/navigationE_home"
         android:name="my.edu.tarc.jobseek.home.HomeFragment"
-        android:label="Home"
+        android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
+
         <action
-            android:id="@+id/action_navigationE_home_to_jobDetailFragment"
-            app:destination="@id/jobDetailFragment" />
+            android:id="@+id/action_navigationE_home_to_jobDetailEmployeeFragment4"
+            app:destination="@id/jobDetailEmployeeFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/navigationE_noti"
-        android:name="my.edu.tarc.jobseek.notification.NotifcationFragment"
-        android:label="Notifications"
-        tools:layout="@layout/fragment_notification" />
     <fragment
         android:id="@+id/navigationE_headHunting"
         android:name="my.edu.tarc.jobseek.headHunting.HeadHuntingFragment"
@@ -85,20 +81,20 @@
         android:name="my.edu.tarc.jobseek.accecptedJobs.AcceptedJobsFragment"
         android:label="fragment_accecpted_jobs"
         tools:layout="@layout/fragment_accecpted_jobs" />
-        tools:layout="@layout/fragment_headhunting" />
-    <fragment
-        android:id="@+id/jobDetailFragment"
-        android:name="my.edu.tarc.jobseek.job_detail.JobDetailFragment"
-        android:label="fragment_job_detail"
-        tools:layout="@layout/fragment_job_detail" >
-        <action
-            android:id="@+id/action_jobDetailFragment_to_navigationE_home"
-            app:destination="@id/navigationE_home" />
-    </fragment>
+
+
     <fragment
         android:id="@+id/appliedJobFragment"
         android:name="my.edu.tarc.jobseek.appiledJob.AppliedJobFragment"
         android:label="fragment_applied_job"
-        tools:layout="@layout/fragment_applied_job" />
-
+        tools:layout="@layout/fragment_applied_job"/>
+    <fragment
+        android:id="@+id/jobDetailEmployeeFragment"
+        android:name="JobDetailEmployeeFragment"
+        android:label="JobDetailEmployeeFragment"
+        tools:layout="@layout/fragment_job_detail_employee">
+        <action
+            android:id="@+id/action_jobDetailEmployeeFragment_to_navigationE_home3"
+            app:destination="@id/navigationE_home" />
+    </fragment>
 </navigation>

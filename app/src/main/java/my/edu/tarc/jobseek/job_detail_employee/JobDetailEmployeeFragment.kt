@@ -1,5 +1,4 @@
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +8,6 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import my.edu.tarc.jobseek.databinding.FragmentJobDetailBinding
 import my.edu.tarc.jobseek.databinding.FragmentJobDetailEmployeeBinding
 import my.edu.tarc.jobseek.home.HomeViewModel
 import my.edu.tarc.jobseek.home.JobModel

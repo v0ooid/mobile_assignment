@@ -116,6 +116,6 @@
             viewModel.selectedIndex = Index
             // Set the selected job in the ViewModel
             viewModel.selectedJob = filteredJobList.getOrNull(Index)
-            findNavController().navigate(R.id.action_navigationE_home_to_jobDetailFragment)
+            findNavController().navigate(R.id.action_navigationE_home_to_jobDetailEmployeeFragment4)
         }
     }

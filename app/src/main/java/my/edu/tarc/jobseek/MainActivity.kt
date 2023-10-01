@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigationE_home, R.id.recyclerViewAppliedJob, R.id.navigationE_headHunting, R.id.navigationE_profile
+                R.id.navigationE_home, R.id.recyclerViewAppliedJob, R.id.navigationE_headHunting, R.id.appliedJobFragment
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
             } else if (destination.id == R.id.navigationE_headHunting){
                 actionBar?.title = "Head Hunting"
             }
-            else if (destination.id == R.id.navigationE_profile){
+            else if (destination.id == R.id.appliedJobFragment){
                 actionBar?.title = "Profile"
             } else{
                 title = getString(R.string.app_name)
