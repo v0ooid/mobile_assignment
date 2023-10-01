@@ -12,11 +12,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import my.edu.tarc.jobseek.databinding.ActivityMainBinding
-import my.edu.tarc.jobseek.headHunting.HeadHuntingFragment
-import my.edu.tarc.jobseek.home.HomeFragment
 import my.edu.tarc.jobseek.home.HomeViewModel
-import my.edu.tarc.jobseek.notification.NotifcationFragment
-import java.util.ServiceConfigurationError
 
 
 class MainActivity : AppCompatActivity() {
