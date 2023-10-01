@@ -1,174 +1,223 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/outConstraint"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:layout_editor_absoluteX="1dp"
-    tools:layout_editor_absoluteY="1dp"
-    android:fillViewport="true">
-
-    <androidx.cardview.widget.CardView
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarTop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="20dp"
-        app:cardElevation="20dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/leftIcon"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:padding="20dp">
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/round_arrow_back_ios_24" />
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:src="@drawable/suitcase"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/leftIcon"
+            android:textSize="25sp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/job_specialization"
-                android:textSize="20sp"
-                android:textAlignment="center"/>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:id="@+id/editTextCompanyName"
-                android:layout_marginTop="20dp"
-                android:padding="16dp"
-                android:text="Kaion Enterprise"
-                android:gravity="start|center_vertical"
-                android:background="@drawable/border"
-                android:editable="false"/>
+    </androidx.appcompat.widget.Toolbar>
+    <ScrollView xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        tools:context=".job_posting.JobPostingFragment"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarTop"
+        app:layout_constraintStart_toStartOf="@+id/toolbarTop"
+        app:layout_constraintEnd_toEndOf="@+id/toolbarTop"
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:id="@+id/editTextJobTitle"
-                android:layout_marginTop="20dp"
-                android:padding="16dp"
-                android:hint="@string/ask_job_title"
-                android:gravity="start|center_vertical"
-                android:background="@drawable/border"/>
+        >
 
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:id="@+id/spinnerJobSpecialization"
-                android:layout_marginTop="20dp"
-                android:padding="16dp"
-                android:entries="@array/job_specialization_group"
-                android:gravity="start|center_vertical"
-                android:background="@drawable/border"/>
-
-            <TextView
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/employment_type"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
-                android:textSize="15sp"
-                android:textStyle="bold"/>
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:cardElevation="20dp">
 
-            <RadioGroup
-                android:id="@+id/radioGroupEmploymentType"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:checkedButton="@id/radioButtonFullTime"
-                android:orientation="horizontal">
 
-                <RadioButton
-                    android:id="@+id/radioButtonFullTime"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/full_time" />
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="20dp">
 
-                <RadioButton
-                    android:id="@+id/radioButtonPartTime"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/part_time" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/suitcase" />
 
-                <RadioButton
-                    android:id="@+id/radioButtonInternship"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/internship" />
-            </RadioGroup>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/job_specialization"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:id="@+id/editTextJobResponsibility"
-                android:padding="16dp"
-                android:hint="@string/job_responsibility"
-                android:layout_marginTop="20dp"
-                android:ems="10"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:background="@drawable/border"/>
+                    <EditText
+                        android:id="@+id/editTextCompanyName"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/border"
+                        android:editable="false"
+                        android:gravity="start|center_vertical"
+                        android:padding="16dp"
+                        android:text="Kaion Enterprise" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:id="@+id/editTextSkills"
-                android:padding="16dp"
-                android:hint="@string/skills"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/border"/>
+                    <EditText
+                        android:id="@+id/editTextJobTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/border"
+                        android:gravity="start|center_vertical"
+                        android:hint="@string/ask_job_title"
+                        android:padding="16dp" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:id="@+id/editTextQualification"
-                android:padding="16dp"
-                android:hint="@string/qualification"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/border"/>
+                    <Spinner
+                        android:id="@+id/spinnerJobSpecialization"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/border"
+                        android:entries="@array/job_specialization_group"
+                        android:gravity="start|center_vertical"
+                        android:padding="16dp" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:id="@+id/editTextYearExperience"
-                android:padding="16dp"
-                android:hint="@string/year_of_experience"
-                android:inputType="number"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/border"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/error_specialization"
+                        android:id="@+id/textViewErrorMessage"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"/>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:id="@+id/editTextNumberSalary"
-                android:padding="16dp"
-                android:hint="@string/salary"
-                android:gravity="start|center_vertical"
-                android:inputType="numberDecimal"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/border"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/employment_type"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/buttonPost"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:text="@string/post"
-                app:cornerRadius="20dp"/>
+                    <RadioGroup
+                        android:id="@+id/radioGroupEmploymentType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:checkedButton="@id/radioButtonFullTime"
+                        android:orientation="horizontal">
 
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                        <RadioButton
+                            android:id="@+id/radioButtonFullTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/full_time" />
 
-</ScrollView>
+                        <RadioButton
+                            android:id="@+id/radioButtonPartTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/part_time" />
+
+                        <RadioButton
+                            android:id="@+id/radioButtonInternship"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/internship" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/editTextJobResponsibility"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:gravity="start|top"
+                        android:hint="@string/job_responsibility"
+                        android:inputType="textMultiLine"
+                        android:padding="16dp" />
+
+                    <EditText
+                        android:id="@+id/editTextSkills"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/border"
+                        android:gravity="start|top"
+                        android:hint="@string/skills"
+                        android:inputType="textMultiLine"
+                        android:padding="16dp" />
+
+                    <EditText
+                        android:id="@+id/editTextQualification"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/border"
+                        android:gravity="start|top"
+                        android:hint="@string/qualification"
+                        android:inputType="textMultiLine"
+                        android:padding="16dp" />
+
+                    <EditText
+                        android:id="@+id/editTextYearExperience"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/border"
+                        android:hint="@string/year_of_experience"
+                        android:inputType="number"
+                        android:padding="16dp" />
+
+                    <EditText
+                        android:id="@+id/editTextNumberSalary"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/border"
+                        android:gravity="start|center_vertical"
+                        android:hint="@string/salary"
+                        android:inputType="numberDecimal"
+                        android:padding="16dp" />
+
+                    <Button
+                        android:id="@+id/buttonPost"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="40dp"
+                        android:text="@string/post"
+                        app:cornerRadius="20dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

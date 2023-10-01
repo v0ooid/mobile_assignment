@@ -43,7 +43,8 @@ class JobListFragment : Fragment(), MyClickListener {
 
         // Initialize Firebase Realtime Database reference
         val database = FirebaseDatabase.getInstance()
-        val reference = database.getReference("Jobs").child("Kaion Enterprise")//wait xion
+        var companyName = "Kaion Enterprise"
+        val reference = database.getReference("Jobs").child(companyName)
 
         // Add a ValueEventListener to fetch data from Firebase
         reference.addValueEventListener(object : ValueEventListener {

@@ -3,28 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-<<<<<<< HEAD
     app:startDestination="@id/jobListFragment">
-    <fragment
-        android:id="@+id/jobListFragment"
-        android:name="my.edu.tarc.jobseek.job_list.JobListFragment"
-        android:label="fragment_job_list"
-        tools:layout="@layout/fragment_job_list" >
-        <action
-            android:id="@+id/action_jobListFragment_to_jobDetailFragment"
-            app:destination="@id/jobDetailFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/jobDetailFragment"
-        android:name="my.edu.tarc.jobseek.job_detail.JobDetailFragment"
-        android:label="fragment_job_detail"
-        tools:layout="@layout/fragment_job_detail" >
-        <action
-            android:id="@+id/action_jobDetailFragment_to_jobListFragment"
-            app:destination="@id/jobListFragment" />
-    </fragment>
-=======
-    app:startDestination="@id/navigationE_home">
+
+
     <fragment
         android:id="@+id/navigationE_home"
         android:name="my.edu.tarc.jobseek.home.HomeFragment"
@@ -40,6 +21,47 @@
         android:name="my.edu.tarc.jobseek.headHunting.HeadHuntingFragment"
         android:label="Head Hunting"
         tools:layout="@layout/fragment_headhunting" />
+    <fragment
+        android:id="@+id/jobListFragment"
+        android:name="my.edu.tarc.jobseek.job_list.JobListFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_job_list">
+        <action
+            android:id="@+id/action_jobListFragment_to_jobDetailFragment"
+            app:destination="@id/jobDetailFragment" />
+        <action
+            android:id="@+id/action_jobListFragment_to_jobPostingFragment"
+            app:destination="@id/jobPostingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jobDetailFragment"
+        android:name="my.edu.tarc.jobseek.job_detail.JobDetailFragment"
+        android:label="Job Details"
+        tools:layout="@layout/fragment_job_detail">
+        <action
+            android:id="@+id/action_jobDetailFragment_to_jobListFragment"
+            app:destination="@id/jobListFragment" />
+        <action
+            android:id="@+id/action_jobDetailFragment_to_jobUpdateFragment"
+            app:destination="@id/jobUpdateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jobPostingFragment"
+        android:name="my.edu.tarc.jobseek.job_posting.JobPostingFragment"
+        android:label="fragment_job_posting"
+        tools:layout="@layout/fragment_job_posting" >
+        <action
+            android:id="@+id/action_jobPostingFragment_to_jobListFragment"
+            app:destination="@id/jobListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jobUpdateFragment"
+        android:name="my.edu.tarc.jobseek.job_update.JobUpdateFragment"
+        android:label="fragment_job_update"
+        tools:layout="@layout/fragment_job_update" >
+        <action
+            android:id="@+id/action_jobUpdateFragment_to_jobListFragment"
+            app:destination="@id/jobListFragment" />
+    </fragment>
 
->>>>>>> 9ff5455cfd4bf149d5b4adb17b436824780d6d23
 </navigation>

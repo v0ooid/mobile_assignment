@@ -17,7 +17,7 @@ class JobAdapter(private val jobList : List<Job>, private val listener:MyClickLi
         val jobTitle : TextView = itemView.findViewById(R.id.textViewJobTitle)
         //val jobSpecialization:TextView = itemView.findViewById(R.id.spinnerJobSpecialization)
         val employmentType : TextView = itemView.findViewById(R.id.textViewEmploymentType)
-        //val jobResponsibility:TextView=itemView.findViewById(R.id.editTextJobResponsibility)
+        //val jobResponsibility:TextView=itemView.findViewById(R.id.textViewJobResponsibility)
         //val skills:TextView=itemView.findViewById(R.id.editTextSkills)
         //val qualification:TextView=itemView.findViewById(R.id.editTextQualification)
        // val yearOfExperience:TextView=itemView.findViewById(R.id.editTextYearExperience)
@@ -33,9 +33,14 @@ class JobAdapter(private val jobList : List<Job>, private val listener:MyClickLi
         val currentItem = jobList[position]
 
         holder.jobTitle.text = currentItem.job_title
-        //holder.skills.text = currentItem.skills
+        currentItem.skills
         holder.employmentType.text = currentItem.employment_type
         holder.salary.text = currentItem.salary.toString()
+        currentItem.job_responsibility
+        currentItem.job_specialization.toString()
+        currentItem.qualification
+        currentItem.year_of_experience
+        currentItem.salary
 
         holder.itemView.setOnClickListener{
             listener.onRecordClickListener(position)
