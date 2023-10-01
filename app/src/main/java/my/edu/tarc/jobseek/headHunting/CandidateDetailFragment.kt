@@ -4,7 +4,6 @@ import android.app.AlertDialog
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,7 +17,7 @@ class CandidateDetailFragment : Fragment(){
     private var _binding: FragmentCandidateBinding? = null
     private val binding get() = _binding!!
     private val viewModel: HeadHuntingViewModel by activityViewModels()
-    private var candiSelected: Candidate? = null
+    private var candiSelected: Employee? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -41,7 +40,7 @@ class CandidateDetailFragment : Fragment(){
             // Check if selectedIndex is valid
             if (viewModel.selectedIndex >= 0 && viewModel.selectedIndex < candidateList.size) {
                 candiSelected = candidateList[viewModel.selectedIndex]
-                binding.textViewName.text = candiSelected?.name
+                binding.textViewName.text = candiSelected?.username
                 binding.textViewField.text = candiSelected?.field
                 binding.textViewExperience.text = candiSelected?.experience
                 binding.textViewSchool.text = candiSelected?.school
@@ -76,7 +75,7 @@ class CandidateDetailFragment : Fragment(){
                     1 -> {
 
                         var subject = "Regarding Job Opportunity"
-                        var body = "Dear ${candiSelected?.name},\n\nI am interested in discussing a job opportunity with you..."
+                        var body = "Dear ${candiSelected?.username},\n\nI am interested in discussing a job opportunity with you..."
                         val email = candiSelected?.email
 
                         val selectorIntent = Intent(Intent.ACTION_SENDTO)

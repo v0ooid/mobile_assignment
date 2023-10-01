@@ -44,7 +44,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textViewAppliedJobName"
+            android:id="@+id/textViewCandiName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -61,10 +61,10 @@
             android:layout_marginEnd="8dp"
             android:text="@string/candi_field"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
-            app:layout_constraintTop_toBottomOf="@+id/textViewAppliedJobName" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewCandiName" />
 
         <TextView
-            android:id="@+id/textViewAppliedJobField"
+            android:id="@+id/textViewCandiField"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -81,10 +81,10 @@
             android:layout_marginEnd="8dp"
             android:text="@string/candi_experience"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
-            app:layout_constraintTop_toBottomOf="@+id/textViewAppliedJobField" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewCandiField" />
 
         <TextView
-            android:id="@+id/textViewAppliedJobExp"
+            android:id="@+id/textViewCandiExp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -101,10 +101,10 @@
             android:layout_marginEnd="8dp"
             android:text="@string/candi_location"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
-            app:layout_constraintTop_toBottomOf="@+id/textViewAppliedJobExp" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewCandiExp" />
 
         <TextView
-            android:id="@+id/textViewAppliedJobLocation"
+            android:id="@+id/textViewCandiLocation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
