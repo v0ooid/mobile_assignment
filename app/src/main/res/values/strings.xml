@@ -11,14 +11,27 @@
     <string name="state">State</string>
     <string-array name="job_specialization_group">
         <item>select a job specialization</item>
-        <item>Audit</item>
         <item>Accounting</item>
         <item>Admin</item>
+        <item>Audit</item>
         <item>Beauty</item>
         <item>Cleaning</item>
         <item>Construction</item>
-        <item>HR</item>
+        <item>Customer Service</item>
+        <item>Education</item>
+        <item>Finance</item>
+        <item>Healthcare</item>
+        <item>Human Resources</item>
+        <item>Information Technology</item>
+        <item>Legal</item>
+        <item>Manufacturing</item>
+        <item>Marketing</item>
+        <item>Media</item>
+        <item>Real Estate</item>
+        <item>Retail</item>
+        <item>Sales</item>
         <item>Software Engineering</item>
+        <item>Telecommunications</item>
     </string-array>
     <string name="employment_type">Employment Type</string>
     <string name="full_time">Full Time</string>

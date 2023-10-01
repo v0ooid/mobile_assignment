@@ -11,7 +11,7 @@ android {
     defaultConfig {
         applicationId = "my.edu.tarc.jobseek"
         minSdk = 29
-        targetSdk = 34
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 
@@ -21,6 +21,7 @@ android {
 
     buildFeatures{
         viewBinding = true
+        dataBinding = true
     }
 
     buildTypes {

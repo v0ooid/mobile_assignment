@@ -10,15 +10,15 @@
         android:label="Home"
         tools:layout="@layout/fragment_home" />
     <fragment
-        android:id="@+id/navigationE_noti"
-        android:name="my.edu.tarc.jobseek.notification.NotifcationFragment"
-        android:label="Notifications"
-        tools:layout="@layout/fragment_notification" />
-    <fragment
         android:id="@+id/navigationE_headHunting"
         android:name="my.edu.tarc.jobseek.headHunting.HeadHuntingFragment"
         android:label="Head Hunting"
-        tools:layout="@layout/fragment_headhunting" />
+        tools:layout="@layout/fragment_head_hunting" >
+        <action
+            android:id="@+id/action_navigationE_headHunting_to_candidateDetailFragment"
+            app:destination="@id/candidateDetailFragment" />
+    </fragment>
+
     <fragment
         android:id="@+id/jobListFragment"
         android:name="my.edu.tarc.jobseek.job_list.JobListFragment"
@@ -61,11 +61,7 @@
             android:id="@+id/action_jobUpdateFragment_to_jobListFragment"
             app:destination="@id/jobListFragment" />
     </fragment>
-        tools:layout="@layout/fragment_head_hunting" >
-        <action
-            android:id="@+id/action_navigationE_headHunting_to_candidateDetailFragment"
-            app:destination="@id/candidateDetailFragment" />
-    </fragment>
+
     <fragment
         android:id="@+id/candidateDetailFragment"
         android:name="my.edu.tarc.jobseek.headHunting.CandidateDetailFragment"

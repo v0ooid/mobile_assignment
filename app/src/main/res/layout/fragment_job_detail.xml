@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/outConstraint"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/outConstraint"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
@@ -28,7 +29,10 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toEndOf="@+id/leftIcon"
-            android:textSize="25sp" />
+            android:text="Job Detail"
+            android:textSize="25sp"
+            tools:layout_editor_absoluteX="50dp"
+            tools:layout_editor_absoluteY="11dp" />
 
 
     </androidx.appcompat.widget.Toolbar>

@@ -39,6 +39,7 @@ class MainActivityEmployer : AppCompatActivity() {
 //                }
 //
         }
+
         navView.setupWithNavController(navController)
 
         binding.floatingActionButtonAddPost.setOnClickListener {

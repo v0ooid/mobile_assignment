@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/navigationE_home"
+        android:id="@+id/jobListFragment"
         android:icon="@drawable/ic_home"
         android:title="@string/title_home" />
     <item
-        android:id="@+id/navigationE_noti"
+        android:id="@+id/navigationE_accept"
         android:icon="@drawable/ic_notifcations"
         android:title="@string/title_notifications" />
 
