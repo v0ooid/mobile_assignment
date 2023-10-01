@@ -81,6 +81,14 @@
     <string name="candi_field">Field</string>
     <string name="candi_experience">Experience</string>
     <string name="candi_location">Location</string>
+    <string name="candiQualification"><u>Qualification</u></string>
+    <string name="candiExperience">Working Experience</string>
+    <string name="candiSchool">School</string>
+    <string name="candiEducation"><u>Education</u></string>
+    <string name="candiLevel">Level</string>
+    <string name="candiCGPA">CGPA</string>
+    <string name="jobApplied">Job Applied</string>
+
     <string name="candi_education">Education</string>
 
 </resources>
