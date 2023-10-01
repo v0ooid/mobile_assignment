@@ -5,9 +5,9 @@
         android:icon="@drawable/ic_home"
         android:title="@string/title_home" />
     <item
-        android:id="@+id/navigation_notifications"
-        android:icon="@drawable/ic_notifcations"
-        android:title="@string/title_notifications" />
+        android:id="@+id/appliedJobFragment"
+        android:icon="@drawable/ic_job_applied"
+        android:title="@string/applied_job" />
     <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/ic_profile"

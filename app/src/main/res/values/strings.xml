@@ -1,14 +1,10 @@
 <resources>
     <string name="app_name">JobSeek</string>
 
-    <string name="company_name">Company Name</string>
     <string name="upload_logo">Upload Logo</string>
     <string name="job_specialization">Job Specialization</string>
     <string name="ask_job_title">What is the job title?</string>
     <string name="ask_company_name">What is your company name?</string>
-    <string name="job_title">Job Title</string>
-    <string name="salary">Salary</string>
-    <string name="state">State</string>
     <string-array name="job_specialization_group">
         <item>select a job specialization</item>
         <item>Accounting</item>
@@ -33,7 +29,6 @@
         <item>Software Engineering</item>
         <item>Telecommunications</item>
     </string-array>
-    <string name="employment_type">Employment Type</string>
     <string name="full_time">Full Time</string>
     <string name="part_time">Part Time</string>
     <string name="internship">Internship</string>
@@ -103,5 +98,28 @@
     <string name="jobApplied">Job Applied</string>
 
     <string name="candi_education">Education</string>
+
+    <!-- HOME -->
+    <string name="filter_content">Filter your job</string>
+    <string name="search_tips">Search Job...</string>
+
+    <!-- Job Details -->
+    <string name="job_title">Job Title</string>
+    <string name="company_name">Company Name</string>
+    <string name="location">Location</string>
+    <string name="salary">Salary</string>
+    <string name="employment_type_title">Employment Type:</string>
+    <string name="employment_type">Type</string>
+    <string name="state">State</string>
+    <string name="job_special_title">Job Specialization:</string>
+    <string name="job_special">Job Specialization</string>
+    <string name="job_res_title">Job Responsibility:</string>
+    <string name="job_res">Job Responsibility</string>
+    <string name="qualification_title">Qualification:</string>
+    <string name="skill_title">Skill:</string>
+    <string name="skill">Skill</string>
+    <string name="year_title">Year Of Experience:</string>
+    <string name="year">year</string>
+    <string name="apply">Apply</string>
 
 </resources>
