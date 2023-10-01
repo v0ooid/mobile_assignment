@@ -3,27 +3,23 @@ package my.edu.tarc.jobseek
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
+import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
-import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.NavigationUI.setupWithNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import my.edu.tarc.jobseek.databinding.ActivityMainBinding
-import my.edu.tarc.jobseek.headHunting.HeadHuntingFragment
-import my.edu.tarc.jobseek.home.HomeFragment
-import my.edu.tarc.jobseek.notification.NotifcationFragment
-import java.util.ServiceConfigurationError
+import my.edu.tarc.jobseek.home.HomeViewModel
 
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
+    private val sharedViewModel: HomeViewModel by viewModels()
 
     private var isBottomNavigationBarVisible = true
 
@@ -39,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigationE_home, R.id.navigationE_noti, R.id.navigationE_headHunting, R.id.navigationE_profile
+                R.id.navigationE_home, R.id.recyclerViewAppliedJob, R.id.navigationE_headHunting, R.id.navigationE_profile
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -48,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener { _, destination, _ ->
             if (destination.id == R.id.navigation_home){
                 actionBar?.title = "Home"
-            } else if (destination.id == R.id.navigationE_noti){
+            } else if (destination.id == R.id.recyclerViewAppliedJob){
                 actionBar?.title = "Notifications"
             } else if (destination.id == R.id.navigationE_headHunting){
                 actionBar?.title = "Head Hunting"

@@ -33,4 +33,25 @@
 
     <!-- HOME -->
     <string name="filter_content">Filter your job</string>
+    <string name="search_tips">Search Job...</string>
+
+    <!-- Job Details -->
+    <string name="job_title">Job Title</string>
+    <string name="company_name">Company Name</string>
+    <string name="location">Location</string>
+    <string name="salary">Salary</string>
+    <string name="employment_type_title">Employment Type:</string>
+    <string name="employment_type">Type</string>
+    <string name="state">State</string>
+    <string name="job_special_title">Job Specialization:</string>
+    <string name="job_special">Job Specialization</string>
+    <string name="job_res_title">Job Responsibility:</string>
+    <string name="job_res">Job Responsibility</string>
+    <string name="qualification_title">Qualification:</string>
+    <string name="qualification">Qualification</string>
+    <string name="skill_title">Skill:</string>
+    <string name="skill">Skill</string>
+    <string name="year_title">Year Of Experience:</string>
+    <string name="year">year</string>
+    <string name="apply">Apply</string>
 </resources>
